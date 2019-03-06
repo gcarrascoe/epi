@@ -1,37 +1,16 @@
-## Welcome to GitHub Pages
+## *Causal inference book*
+##### last update: 2019 - 02 - 06
+This links contains useful R codes for part 1 of [*Causal Inference*](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/) by *Miguel Hernán* and *Jamie Robins*.
 
-You can use the [editor on GitHub](https://github.com/gcarrascoe/epi/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Most codes were written under the [tidyverse](https://www.tidyverse.org/) ecosystem of R packages.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+You can find other stuff or simply say hi on twitter [@gabc91](https://twitter.com/Gabc91)
 
-### Markdown
+##### Codes
+- [Frequentist statistics]()
+- [*p-value* function]()
+- [Inverse probaility weigthing]()
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## *Modern Epidemiology*
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/gcarrascoe/epi/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+##### *Coming soon*
