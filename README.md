@@ -21,4 +21,4 @@ You can find other stuff or simply say hi on twitter [@gabc91](https://twitter.c
 Some rutines of anaylytical approaches for social epidemiology by [Tarik Benmarhnia](https://twitter.com/TBenmarhnia) and [Eyal Oren](https://publichealth.sdsu.edu/oren/)
 
 ##### Codes
-- [Gini and Concentration Indexes]()
+- [Gini and Concentration Indexes](https://gcarrascoe.github.io/epi/Gini_conc.html)
