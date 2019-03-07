@@ -7,9 +7,16 @@ Most codes were written under the [tidyverse](https://www.tidyverse.org/) ecosys
 You can find other stuff or simply say hi on twitter [@gabc91](https://twitter.com/Gabc91)
 
 ##### Codes
+- [Inverse probaility weigthing]()
+- [IPW graphs]()
+
+## *Statistics*
+##### last update: 2019 - 02 - 06
+This links contains R codes to simulate frequentist statistical approaches
+
+##### Codes
 - [Frequentist statistics]()
 - [*p-value* function]()
-- [Inverse probaility weigthing]()
 
 ## *Modern Epidemiology*
 
