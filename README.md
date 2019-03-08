@@ -24,7 +24,7 @@ This links contains R codes to simulate frequentist statistical approaches
 
 
 ## *Social Epidemiology*
-##### last update: 2019 - 02 - 06
+##### last update: 2019 - 03 - 08
 
 Some rutines of anaylytical approaches for social epidemiology by [Tarik Benmarhnia](https://twitter.com/TBenmarhnia) and [Eyal Oren](https://publichealth.sdsu.edu/oren/)
 
