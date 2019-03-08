@@ -54,11 +54,11 @@ lm1<-dat %>% filter(insurance!="") %>%
 summary(lm1)
 ```
 
-<span style="color:#156127FE">The birthweight at birth of children from women that are covered by health insurance is in avergae 28.9 grams less in comparison to children from women with no coverage.</span>
+<span style="color:#156127FE">The birthweight at birth of children from women that are covered by health insurance is in average 28.9 grams less in comparison to children from women with no coverage.</span>
 
 ### Q3. Adjust for covariates??
 #### Would you use additional variables (like age at first marriage, literacy) in this model? Justify your response (max 3 sentences)
-<span style="color:#156127FE">No because we're not explaining the causal mechanism of insurance over bw. We're trying to reflect the real world</span>
+<span style="color:#156127FE">No, because we're not explaining the causal mechanism of insurance over bw. We're trying to reflect the real world</span>
 
 ### Q4. Concentration Index - step 1
 #### Now consider the variable “wealth_ind” with 5 possible values (1 = poorest). Calculate the proportion of women in each wealth quantile.
@@ -117,7 +117,7 @@ lm2<-dat %>% filter(literacy!="",literacy!="9") %>%
 summary(lm2)
 ```
 
-<span style="color:#156127FE">The birthweight at birth of children from women with safe access to drinking water is in avergae 38.97 grams more  in comparison to children from women with no safe access to drinking water, after adjusting for other covariates</span>
+<span style="color:#156127FE">The birthweight at birth of children from women with safe access to drinking water is in average 38.97 grams more  in comparison to children from women with no safe access to drinking water, after adjusting for other covariates</span>
 
 ### Q8. The Slope Index of Inequality - Stratified
 #### Estimate the same effect of drinking water on bw among women that are covered by health insurance and those who are not (in 2 stratified/distinct models). What do you conclude? (Max 3 sentences).
