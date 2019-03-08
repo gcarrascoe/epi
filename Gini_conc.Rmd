@@ -1,6 +1,6 @@
 ---
 title: "PH700 - Lab 1"
-subtitle: Pruebas de hip?tesis
+subtitle:
 Project: 
 author:
 - name: "Gabriel Carrasco Escobar"
@@ -20,7 +20,8 @@ options(knitr.table.format = "latex")
 dat <- read.csv("~/Dropbox/Doctorate/Classes/Spring 2019/PH 700A - Social Epidemiology/Assignments/HW1/DHS_Peru.csv")
 ```
 
-### 1. Compare the health outcome “bw” distribution between women that are covered by health insurance and those who are not (variable “insurance” = 1 if yes). Justify your approach (max 3 sentences)
+### Q1. 
+#### Compare the health outcome “bw” distribution between women that are covered by health insurance and those who are not (variable “insurance” = 1 if yes). Justify your approach (max 3 sentences)
 ```{r message = FALSE, warning = FALSE, fig.height = 4}
 s1<-dat %>% filter(insurance!="") %>% 
   summaryBy(bw~insurance, data=., FUN=c(length, mean, sd, median, min, max))
@@ -43,37 +44,40 @@ fig<-grid.arrange(p1,p2, nrow = 2)
 s1
 ```
 
-> `r text_spec("There are slight differences in the birthweight at birth of children from women that are covered by health insurance and those who are not.", color = "#156127FE")`
+<span style="color:#156127FE">There are slight differences in the birthweight at birth of children from women that are covered by health insurance and those who are not.</span>
 
-### 2. Use a linear regression model to describe the same insurance-related inequality in “bw”.
+### Q2. 
+#### Use a linear regression model to describe the same insurance-related inequality in “bw”.
 ```{r warning = FALSE}
 lm1<-dat %>% filter(insurance!="") %>%
   lm(bw~insurance,data=.)
 summary(lm1)
 ```
 
-> `r text_spec("The birthweight at birth of children from women that are covered by health insurance is in avergae 28.9 grams less in comparison to children from women with no coverage.", color = "#156127FE")`
+<span style="color:#156127FE">The birthweight at birth of children from women that are covered by health insurance is in avergae 28.9 grams less in comparison to children from women with no coverage.</span>
 
-### 3. Would you use additional variables (like age at first marriage, literacy) in this model? Justify your response (max 3 sentences)
-> `r text_spec("No because we're not explaining the causal mechanism of insurance over bw. We're trying to reflect the real world", color = "#156127FE")`
+### Q3. 
+#### Would you use additional variables (like age at first marriage, literacy) in this model? Justify your response (max 3 sentences)
+<span style="color:#156127FE">No because we're not explaining the causal mechanism of insurance over bw. We're trying to reflect the real world</span>
 
-\pagebreak
-
-### 4. Now consider the variable “wealth_ind” with 5 possible values (1 = poorest). Calculate the proportion of women in each wealth quantile.
+### Q4. 
+#### Now consider the variable “wealth_ind” with 5 possible values (1 = poorest). Calculate the proportion of women in each wealth quantile.
 ```{r warning = FALSE}
 (a<-dat %>% group_by(wealth_ind) %>%
   summarise(woman=n(), prop_w=woman/nrow(dat)))
 ```  
-> `r text_spec("There are less proportion of women in the richest wealth quantiles", color = "#156127FE")`
+<span style="color:#156127FE">There are less proportion of women in the richest wealth quantiles</span>
 
-### 5. What is the proportion of women with access to safe drinking water (safe_water=1) in each wealth index group
+### Q5. 
+#### What is the proportion of women with access to safe drinking water (safe_water=1) in each wealth index group
 ```{r warning = FALSE}
 (b<-dat %>% group_by(wealth_ind) %>%
     summarise(woman=n(), prop_w=woman/nrow(dat), cases=sum(safe_water), prop_cases=cases/woman))
 ```
-> `r text_spec("Women in poorest wealth quantiles have less access to safe drinking water", color = "#156127FE")`
+<span style="color:#156127FE">Women in poorest wealth quantiles have less access to safe drinking water</span>
 
-### 6. Calculate (by hand) the Concentration Index to represent the inequality in “safe_water” across wealth index groups.
+### Q6. 
+#### Calculate (by hand) the Concentration Index to represent the inequality in “safe_water” across wealth index groups.
 ```{r warning = FALSE}
 (c_index<-dat %>% group_by(wealth_ind) %>%
   summarise(woman=n(), prop_w=woman/nrow(dat), cases=sum(safe_water), prop_cases=cases/woman) %>%
@@ -83,7 +87,7 @@ summary(lm1)
 sum(c_index$con_i)
 ```
 
-> `r text_spec("The inequality (Concentration Index) in access to safe drinking water across wealth index groups in Peru is 0.18", color = "#156127FE")`
+<span style="color:#156127FE">The inequality (Concentration Index) in access to safe drinking water across wealth index groups in Peru is 0.18</span>
 
 ```{r warning = FALSE, out.width = "75%", fig.align="center"}
 c_index %>% rbind(0) %>% # to include the initial point (origin to zero)
@@ -96,24 +100,27 @@ c_index %>% rbind(0) %>% # to include the initial point (origin to zero)
   theme_bw()
 ```
 
-### a. Optional: use a statistical package to get the same estimate
+### Q6a. 
+#### Optional: use a statistical package to get the same estimate
 ```{r warning = FALSE}
 dat1<- dat %>% mutate(wealth_i=as.numeric(wealth_ind))
 calcSConc(dat1$safe_water, dat1$wealth_i)
 ```
 
-> `r text_spec("The inequality (Concentration Index) in access to safe drinking water across wealth index groups in Peru according to the 'calcSConc' function is 0.17. The slight difference might be explained by the calculation method ", color = "#156127FE")`
+<span style="color:#156127FE">The inequality (Concentration Index) in access to safe drinking water across wealth index groups in Peru according to the 'calcSConc' function is 0.17. The slight difference might be explained by the calculation method</span>
 
-### 7. Estimate the effect of exposure to safe drinking water on bw. You can assume that age at first marriage (age_mar_yr) and literacy (literacy) are confounders in this relationship. Report and interpret (1 sentence) the coefficient estimate for safe water.
+### Q7. 
+#### Estimate the effect of exposure to safe drinking water on bw. You can assume that age at first marriage (age_mar_yr) and literacy (literacy) are confounders in this relationship. Report and interpret (1 sentence) the coefficient estimate for safe water.
 ```{r warning = FALSE}
 lm2<-dat %>% filter(literacy!="",literacy!="9") %>%
   lm(bw~safe_water+age_mar_yr+literacy,data=.)
 summary(lm2)
 ```
 
-> `r text_spec("The birthweight at birth of children from women with safe access to drinking water is in avergae 38.97 grams more  in comparison to children from women with no safe access to drinking water, after adjusting for other covariates.", color = "#156127FE")`
+<span style="color:#156127FE">The birthweight at birth of children from women with safe access to drinking water is in avergae 38.97 grams more  in comparison to children from women with no safe access to drinking water, after adjusting for other covariates</span>
 
-### 8. Estimate the same effect of drinking water on bw among women that are covered by health insurance and those who are not (in 2 stratified/distinct models). What do you conclude? (Max 3 sentences).
+### Q8. 
+#### Estimate the same effect of drinking water on bw among women that are covered by health insurance and those who are not (in 2 stratified/distinct models). What do you conclude? (Max 3 sentences).
 **_No Insurance_**
 ```{r warning = FALSE}
 lm3_1<-dat %>% filter(literacy!="",literacy!="9", insurance=="0 = no") %>%
@@ -128,9 +135,10 @@ lm3_2<-dat %>% filter(literacy!="",literacy!="9", insurance=="1 = yes") %>%
 summary(lm3_2)
 ```
 
-> `r text_spec("There is a differential effect of safe access to drinking water on birthweight of childs between women that are covered by health insurance and those who are not.", color = "#156127FE")`
+<span style="color:#156127FE">There is a differential effect of safe access to drinking water on birthweight of childs between women that are covered by health insurance and those who are not</span>
 
-### a. Bonus Question: If needed, conduct any additional statistical test. Justify your approach (max 3 sentences). 
+### Q8a. 
+#### Bonus Question: If needed, conduct any additional statistical test. Justify your approach (max 3 sentences). 
 [Hint: some heterogeneity tests –Wald or Cochran Q tests for example- may be needed]
 ```{r warning = FALSE}
 lm4<-dat %>% filter(literacy!="",literacy!="9", insurance!="") %>%
@@ -138,5 +146,5 @@ lm4<-dat %>% filter(literacy!="",literacy!="9", insurance!="") %>%
 summary(lm4)
 ```
 
-> `r text_spec("According to the Wald test of the interaction term, there is no effect measure modification in the multiplicative scale.", color = "#156127FE")`
+<span style="color:#156127FE">According to the Wald test of the interaction term, there is no effect measure modification in the multiplicative scale</span>
 
