@@ -20,7 +20,7 @@ options(knitr.table.format = "latex")
 dat <- read.csv("~/Dropbox/Doctorate/Classes/Spring 2019/PH 700A - Social Epidemiology/Assignments/HW1/DHS_Peru.csv")
 ```
 
-### Q1. 
+### Q1. Distribution of bw across insurance
 #### Compare the health outcome “bw” distribution between women that are covered by health insurance and those who are not (variable “insurance” = 1 if yes). Justify your approach (max 3 sentences)
 ```{r message = FALSE, warning = FALSE, fig.height = 4}
 s1<-dat %>% filter(insurance!="") %>% 
@@ -46,7 +46,7 @@ s1
 
 <span style="color:#156127FE">There are slight differences in the birthweight at birth of children from women that are covered by health insurance and those who are not.</span>
 
-### Q2. 
+### Q2. Linear regresssion
 #### Use a linear regression model to describe the same insurance-related inequality in “bw”.
 ```{r warning = FALSE}
 lm1<-dat %>% filter(insurance!="") %>%
@@ -56,11 +56,11 @@ summary(lm1)
 
 <span style="color:#156127FE">The birthweight at birth of children from women that are covered by health insurance is in avergae 28.9 grams less in comparison to children from women with no coverage.</span>
 
-### Q3. 
+### Q3. Adjust for covariates??
 #### Would you use additional variables (like age at first marriage, literacy) in this model? Justify your response (max 3 sentences)
 <span style="color:#156127FE">No because we're not explaining the causal mechanism of insurance over bw. We're trying to reflect the real world</span>
 
-### Q4. 
+### Q4. Concentration Index - step 1
 #### Now consider the variable “wealth_ind” with 5 possible values (1 = poorest). Calculate the proportion of women in each wealth quantile.
 ```{r warning = FALSE}
 (a<-dat %>% group_by(wealth_ind) %>%
@@ -68,7 +68,7 @@ summary(lm1)
 ```  
 <span style="color:#156127FE">There are less proportion of women in the richest wealth quantiles</span>
 
-### Q5. 
+### Q5. Concentration Index - step 2
 #### What is the proportion of women with access to safe drinking water (safe_water=1) in each wealth index group
 ```{r warning = FALSE}
 (b<-dat %>% group_by(wealth_ind) %>%
@@ -76,7 +76,7 @@ summary(lm1)
 ```
 <span style="color:#156127FE">Women in poorest wealth quantiles have less access to safe drinking water</span>
 
-### Q6. 
+### Q6. Concentration Index - step 3
 #### Calculate (by hand) the Concentration Index to represent the inequality in “safe_water” across wealth index groups.
 ```{r warning = FALSE}
 (c_index<-dat %>% group_by(wealth_ind) %>%
@@ -100,7 +100,7 @@ c_index %>% rbind(0) %>% # to include the initial point (origin to zero)
   theme_bw()
 ```
 
-### Q6a. 
+### Q6a. Concentration Index - 'calcSConc' package
 #### Optional: use a statistical package to get the same estimate
 ```{r warning = FALSE}
 dat1<- dat %>% mutate(wealth_i=as.numeric(wealth_ind))
@@ -109,7 +109,7 @@ calcSConc(dat1$safe_water, dat1$wealth_i)
 
 <span style="color:#156127FE">The inequality (Concentration Index) in access to safe drinking water across wealth index groups in Peru according to the 'calcSConc' function is 0.17. The slight difference might be explained by the calculation method</span>
 
-### Q7. 
+### Q7. The Slope Index of Inequality
 #### Estimate the effect of exposure to safe drinking water on bw. You can assume that age at first marriage (age_mar_yr) and literacy (literacy) are confounders in this relationship. Report and interpret (1 sentence) the coefficient estimate for safe water.
 ```{r warning = FALSE}
 lm2<-dat %>% filter(literacy!="",literacy!="9") %>%
@@ -119,7 +119,7 @@ summary(lm2)
 
 <span style="color:#156127FE">The birthweight at birth of children from women with safe access to drinking water is in avergae 38.97 grams more  in comparison to children from women with no safe access to drinking water, after adjusting for other covariates</span>
 
-### Q8. 
+### Q8. The Slope Index of Inequality - Stratified
 #### Estimate the same effect of drinking water on bw among women that are covered by health insurance and those who are not (in 2 stratified/distinct models). What do you conclude? (Max 3 sentences).
 **_No Insurance_**
 ```{r warning = FALSE}
@@ -137,7 +137,7 @@ summary(lm3_2)
 
 <span style="color:#156127FE">There is a differential effect of safe access to drinking water on birthweight of childs between women that are covered by health insurance and those who are not</span>
 
-### Q8a. 
+### Q8a. Heterogeneity tests
 #### Bonus Question: If needed, conduct any additional statistical test. Justify your approach (max 3 sentences). 
 [Hint: some heterogeneity tests –Wald or Cochran Q tests for example- may be needed]
 ```{r warning = FALSE}
