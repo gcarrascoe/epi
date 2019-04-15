@@ -38,3 +38,4 @@ Rutines for data Multivariate analysis in [*Annotated SAS Output for Public Heal
 
 ##### Codes
 - [Lecture 1](https://gcarrascoe.github.io/epi/PH628/PH628_L1.html)
+- [Lecture 13](https://gcarrascoe.github.io/epi/PH628/PH628_L13.html)
