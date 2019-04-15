@@ -26,7 +26,7 @@ This links contains R codes to simulate frequentist statistical approaches
 ## *Social Epidemiology*
 ##### last update: 2019 - 03 - 08
 
-Some rutines of anaylytical approaches for social epidemiology by [Tarik Benmarhnia](https://twitter.com/TBenmarhnia) and [Eyal Oren](https://publichealth.sdsu.edu/oren/)
+Some routines of anaylytical approaches for social epidemiology by [Tarik Benmarhnia](https://twitter.com/TBenmarhnia) and [Eyal Oren](https://publichealth.sdsu.edu/oren/)
 
 ##### Codes
 - [Gini and Concentration Indexes](https://gcarrascoe.github.io/epi_stats/PH700/Gini_conc.html)
@@ -34,7 +34,7 @@ Some rutines of anaylytical approaches for social epidemiology by [Tarik Benmarh
 ## *PH628 - Applications of Multivariate Statistics in Public Health*
 ##### last update: 2019 - 04 - 14
 
-Rutines for data Multivariate analysis in [*Annotated SAS Output for Public Health 628*](https://redshelf.com/book/791372/)
+Routines for data Multivariate analysis in [*Annotated SAS Output for Public Health 628*](https://redshelf.com/book/791372/)
 
 ##### Codes
 - [Lecture 1](https://gcarrascoe.github.io/epi_stats/PH628/PH628_L1.html)
