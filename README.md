@@ -30,3 +30,11 @@ Some rutines of anaylytical approaches for social epidemiology by [Tarik Benmarh
 
 ##### Codes
 - [Gini and Concentration Indexes](https://gcarrascoe.github.io/epi/Gini_conc.html)
+
+## *PH628 - Applications of Multivariate Statistics in Public Health*
+##### last update: 2019 - 04 - 14
+
+Rutines for data Multivariate analysis in [*Annotated SAS output*](https://redshelf.com/book/791372/)
+
+##### Codes
+- [Lecture 1]()
