@@ -37,4 +37,4 @@ Some rutines of anaylytical approaches for social epidemiology by [Tarik Benmarh
 Rutines for data Multivariate analysis in [*Annotated SAS output*](https://redshelf.com/book/791372/)
 
 ##### Codes
-- [Lecture 1]()
+- [Lecture 1](https://gcarrascoe.github.io/epi/PH628/PH628_L1.html)
