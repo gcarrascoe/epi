@@ -3,7 +3,7 @@ Most codes in this repository were written under the [tidyverse](https://www.tid
 You can find other stuff or simply say hi on twitter [@gabc91](https://twitter.com/Gabc91)
 
 ## *PH628 - Applications of Multivariate Statistics in Public Health*
-##### last update: 2019 - 04 - 14
+##### last update: 2019 - 05 - 14
 
 Routines for data Multivariate analysis in [*Annotated SAS Output for Public Health 628*](https://redshelf.com/book/791372/)
 
