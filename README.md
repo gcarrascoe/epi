@@ -2,40 +2,21 @@ Most codes in this repository were written under the [tidyverse](https://www.tid
 
 You can find other stuff or simply say hi on twitter [@gabc91](https://twitter.com/Gabc91)
 
-## *Causal inference book*
-##### last update: 2019 - 02 - 06
-This links contains useful R codes for part 1 of [*Causal Inference*](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/) by *Miguel Hernán* and *Jamie Robins*.
-
-##### Codes
-- [Inverse probaility weigthing]()
-- [IPW graphs]()
-
-## *Statistics*
-##### last update: 2019 - 02 - 06
-This links contains R codes to simulate frequentist statistical approaches
-
-##### Codes
-- [Frequentist statistics]()
-- [*p-value* function]()
-
-## *Modern Epidemiology*
-
-##### *Coming soon*
-
-
-## *Social Epidemiology*
-##### last update: 2019 - 03 - 08
-
-Some routines of anaylytical approaches for social epidemiology by [Tarik Benmarhnia](https://twitter.com/TBenmarhnia) and [Eyal Oren](https://publichealth.sdsu.edu/oren/)
-
-##### Codes
-- [Gini and Concentration Indexes](https://gcarrascoe.github.io/epi_stats/PH700/Gini_conc.html)
-
 ## *PH628 - Applications of Multivariate Statistics in Public Health*
 ##### last update: 2019 - 04 - 14
 
 Routines for data Multivariate analysis in [*Annotated SAS Output for Public Health 628*](https://redshelf.com/book/791372/)
 
 ##### Codes
-- [Lecture 1](https://gcarrascoe.github.io/epi_stats/PH628/PH628_L1.html)
-- [Lecture 13](https://gcarrascoe.github.io/epi_stats/PH628/PH628_L13.html)
+- [Lecture 1: Linear Regression](https://gcarrascoe.github.io/epi_stats/PH628/PH628_L1.html)
+- [Lecture 2: Multiple Linear Regression Diagnostics](https://gcarrascoe.github.io/epi_stats/PH628/PH628_L2.html)
+- [Lecture 3: Outliers](https://gcarrascoe.github.io/epi_stats/PH628/PH628_L3.html)
+- [Lecture 4: Collinearity](https://gcarrascoe.github.io/epi_stats/PH628/PH628_L4.html)
+- [Lecture 5: Goodness-of-Fit and Regression Diagnostics for Logistic Regression](https://gcarrascoe.github.io/epi_stats/PH628/PH628_L5.html)
+- [Lecture 6: PCA](https://gcarrascoe.github.io/epi_stats/PH628/PH628_L6.html)
+- [Lecture 7: PCA (cont)](https://gcarrascoe.github.io/epi_stats/PH628/PH628_L7.html)
+- [Lecture 9: Cluster Analysis](https://gcarrascoe.github.io/epi_stats/PH628/PH628_L9.html)
+- [Lecture 10: Discriminant Analysis](https://gcarrascoe.github.io/epi_stats/PH628/PH628_L10.html)
+- [Lecture 11: Polychotomous Logistic Regression](https://gcarrascoe.github.io/epi_stats/PH628/PH628_L11.html)
+- [Lecture 12: Ordinal Logistic Regression](https://gcarrascoe.github.io/epi_stats/PH628/PH628_L12.html)
+- [Lecture 13-14: Longitudinal Data Analysis](https://gcarrascoe.github.io/epi_stats/PH628/PH628_L13.html)
